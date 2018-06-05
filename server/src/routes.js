@@ -11,4 +11,5 @@ module.exports = (app) => {
   app.get('/songs', songsController.getAllSongs);
   app.get('/songs/:songId', songsController.getSongById);
   app.post('/songs', songsController.post);
+  app.put('/songs/:songId', songsController.updateSong);
 };

@@ -27,7 +27,6 @@ import Lyrics from './Lyrics'
 import Tabs from './Tabs'
 import YouTube from './YouTube'
 import SongsService from '@/services/SongsService'
-import Panel from '@/components/Panel'
 export default {
   data () {
     return {
@@ -39,7 +38,6 @@ export default {
     this.song = (await SongsService.getSongById(songId)).data
   },
   components: {
-    Panel,
     SongMetadata,
     YouTube,
     Lyrics,
@@ -53,23 +51,6 @@ export default {
   padding: 20px;
   height: 330px;
   overflow: hidden;
-}
-
-.album-img {
-  width: 65%;
-  margin: 0 auto;
-}
-
-.song-title {
-  font-size: 30px;
-}
-
-.song-artist {
-  font-size: 24;
-}
-
-.song-genre {
-  font-size: 18;
 }
 
 textarea {
