@@ -1,13 +1,10 @@
 <template>
   <v-app>
     <v-content>
-      <v-container fluid fill-height>
+      <v-container fluid>
         <v-layout align-center justify-center>
           <v-flex xs12 sm8 md4>
-            <v-card class="elevation-12">
-              <v-toolbar dark color="primary">
-                <v-toolbar-title>Login</v-toolbar-title>
-              </v-toolbar>
+            <panel title="Login">
               <v-card-text>
                 <v-form>
                   <v-text-field
@@ -30,7 +27,7 @@
               <v-card-actions>
                 <v-btn color="primary" @click="login">Login</v-btn>
               </v-card-actions>
-            </v-card>
+            </panel>
           </v-flex>
         </v-layout>
       </v-container>
@@ -40,6 +37,7 @@
 
 <script>
 import AuthenticationService from '@/services/AuthenticationService'
+import Panel from '@/components/Panel'
 export default {
   data () {
     return {
@@ -73,6 +71,9 @@ export default {
         console.log(error.response.data.error)
       }
     }
+  },
+  components: {
+    Panel
   },
   props: {
     source: String

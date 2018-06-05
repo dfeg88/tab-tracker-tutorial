@@ -6,7 +6,7 @@
         <router-view></router-view>
       </v-container>
     </v-content>
-    <v-footer app color="accent"></v-footer>
+    <!-- <v-footer app color="accent"></v-footer> -->
   </v-app>
 </template>
 
@@ -28,6 +28,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  padding-top: 110px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .container {
