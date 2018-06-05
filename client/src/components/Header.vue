@@ -1,13 +1,16 @@
 <template>
   <v-toolbar fixed class="cyan" color="primary" dark>
+    <v-toolbar-title mr-4>
+      <router-link
+        class="home"
+        tag="span"
+        :to="{
+          name: 'songs'
+        }">
+        tabTrackerTut
+      </router-link>
+    </v-toolbar-title>
     <v-toolbar-items>
-      <v-btn
-        flat
-        dark
-        router
-        to="/home">
-          <v-toolbar-title>TabTracker_Tut</v-toolbar-title>
-        </v-btn>
       <v-btn
         flat
         dark
@@ -50,7 +53,7 @@ export default {
       this.$store.dispatch('setToken', null)
       this.$store.dispatch('setUser', null)
       this.$router.push({
-        name: 'home'
+        name: 'login'
       })
     }
   }
@@ -58,5 +61,8 @@ export default {
 </script>
 
 <style scoped>
-
+  .home {
+    cursor: pointer;
+    padding: 0.5em;
+  }
 </style>

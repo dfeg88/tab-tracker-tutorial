@@ -31,7 +31,7 @@
           <v-btn
             dark
             class="cyan"
-            @click="navigateTo({name: 'song', params: {songId: song.id}})">
+            :to="({name: 'song', params: {songId: song.id}})">
             View
           </v-btn>
         </v-flex>
@@ -50,11 +50,6 @@ export default {
   data () {
     return {
       songs: null
-    }
-  },
-  methods: {
-    navigateTo (route) {
-      this.$router.push(route)
     }
   },
   watch: {
